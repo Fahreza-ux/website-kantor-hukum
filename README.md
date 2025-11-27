@@ -21,3 +21,6 @@ Website ini dihosting menggunakan GitHub Pages.
 ## Kontak
 - Email: info@hukumu.com
 - Phone: (021) 1234-5678
+
+## View Web
+-  https://fahreza-ux.github.io/website-kantor-hukum/
