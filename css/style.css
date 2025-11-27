@@ -20,7 +20,7 @@
     --secondary-dark-mode: #4299e1;
     --accent-dark-mode: #ecc94b;
     --text-dark-mode: #e2e8f0;
-    --text-light-dark-mode: #a0aec0;
+    --text-light-dark-mode: #cbd5e0;
     --background-dark-mode: #1a202c;
     --background-light-dark-mode: #2d3748;
     --border-dark-mode: #4a5568;
@@ -99,6 +99,11 @@ body.dark-mode {
     box-shadow: var(--shadow-hover);
 }
 
+.theme-toggle:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
 .theme-toggle .sun-icon {
     display: none;
 }
@@ -113,6 +118,27 @@ body.dark-mode .theme-toggle .sun-icon {
 
 body.dark-mode .theme-toggle .moon-icon {
     display: none;
+}
+
+/* Responsive Dark Mode Toggle */
+@media (max-width: 768px) {
+    .theme-toggle {
+        bottom: 16px;
+        right: 16px;
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .theme-toggle {
+        bottom: 12px;
+        right: 12px;
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
 }
 
 /* Header & Navigation */
@@ -185,6 +211,12 @@ body.dark-mode .navbar.scrolled {
 
 .nav-menu a:hover {
     color: var(--secondary);
+}
+
+.nav-menu a:focus {
+    outline: 2px solid var(--secondary);
+    outline-offset: 4px;
+    border-radius: 4px;
 }
 
 .nav-menu a.active {
@@ -320,7 +352,7 @@ body.dark-mode .hero::before {
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     border: 2px solid transparent;
     cursor: pointer;
     gap: 8px;
@@ -341,6 +373,11 @@ body.dark-mode .hero::before {
 
 .btn:hover::before {
     left: 100%;
+}
+
+.btn:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
 }
 
 .btn-primary {
@@ -421,8 +458,13 @@ body.dark-mode .btn-light:hover {
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     border: 2px solid transparent;
+}
+
+.cta-btn:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
 }
 
 .cta-btn.primary {
@@ -461,7 +503,7 @@ body.dark-mode .cta-btn.secondary:hover {
 section {
     padding: 96px 0;
     background: var(--background);
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
 .section-title {
@@ -509,10 +551,11 @@ section {
     border-radius: 12px;
     text-align: center;
     box-shadow: var(--shadow);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid var(--border);
     position: relative;
     overflow: hidden;
+    will-change: transform;
 }
 
 .service-card::before {
@@ -654,7 +697,7 @@ section {
     background: var(--background);
     border-radius: 12px;
     box-shadow: var(--shadow);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid var(--border);
 }
 
@@ -782,7 +825,7 @@ body.dark-mode .footer {
 }
 
 .footer-section a:hover {
-    color: white;
+    color: var(--primary-dark-mode);
 }
 
 .footer-bottom {
@@ -814,8 +857,9 @@ body.dark-mode .footer {
     border-radius: 16px;
     box-shadow: var(--shadow);
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid var(--border);
+    will-change: transform;
 }
 
 .partner-card:hover {
@@ -941,9 +985,10 @@ body.dark-mode .footer {
     border-radius: 12px;
     box-shadow: var(--shadow);
     padding: 2rem;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid var(--border);
     text-align: center;
+    will-change: transform;
 }
 
 .associate-card:hover {
@@ -1017,8 +1062,9 @@ body.dark-mode .footer {
     border-radius: 12px;
     text-align: center;
     box-shadow: var(--shadow);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid var(--border);
+    will-change: transform;
 }
 
 .expertise-item:hover {
@@ -1063,7 +1109,7 @@ body.dark-mode .footer {
     padding: 2.5rem 2rem;
     border-radius: 12px;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     border: 1px solid var(--border);
 }
 
@@ -1131,9 +1177,10 @@ body.dark-mode .footer {
     padding: 2.5rem 2rem;
     border-radius: 12px;
     box-shadow: var(--shadow);
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid var(--border);
     text-align: center;
+    will-change: transform;
 }
 
 .story-card:hover {
@@ -1201,7 +1248,7 @@ body.dark-mode .footer {
     background: var(--background-light);
     padding: 2.5rem 2rem;
     border-radius: 12px;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     border: 1px solid var(--border);
 }
 
@@ -1329,6 +1376,13 @@ body.menu-open {
     overflow: hidden;
 }
 
+@media (max-width: 768px) {
+    body.menu-open {
+        position: fixed;
+        width: 100%;
+    }
+}
+
 .stat-number {
     transition: all 0.3s ease;
 }
@@ -1413,4 +1467,47 @@ body.dark-mode .form-error {
     background: #742a2a;
     border: 1px solid #9b2c2c;
     color: #fed7d7;
+}
+
+/* Responsive Design for Lawyers Page */
+@media (max-width: 768px) {
+    .partners-section,
+    .associates-section,
+    .expertise-section,
+    .achievement-stats,
+    .success-stories,
+    .testimonials-section {
+        padding: 60px 0;
+    }
+    
+    .partner-card {
+        margin: 0 -20px;
+        border-radius: 0;
+    }
+    
+    .lawyer-info {
+        padding: 2rem 1.5rem;
+    }
+    
+    .associates-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .expertise-grid,
+    .stats-grid,
+    .stories-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-content h1,
+    .section-title {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 }
