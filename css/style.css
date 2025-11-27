@@ -864,3 +864,294 @@ textarea:focus {
     outline: 2px solid var(--secondary-blue);
     outline-offset: 2px;
 }
+/* Lawyers Section Styles */
+.partners-section {
+    padding: 80px 0;
+    background: var(--light-bg);
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.partner-card {
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    transition: all 0.3s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.lawyer-photo {
+    background: var(--secondary-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.photo-placeholder {
+    text-align: center;
+    color: var(--white);
+}
+
+.photo-placeholder span {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.lawyer-info {
+    padding: 2.5rem;
+}
+
+.lawyer-info h3 {
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.position {
+    color: var(--secondary-blue);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.specialization {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.specialty {
+    background: var(--light-bg);
+    color: var(--secondary-blue);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid var(--secondary-blue);
+}
+
+.bio {
+    color: var(--text-medium);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.education h4 {
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.education ul {
+    list-style: none;
+    color: var(--text-medium);
+}
+
+.education li {
+    padding: 0.2rem 0;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.education li:before {
+    content: "•";
+    color: var(--secondary-blue);
+    position: absolute;
+    left: 0;
+}
+
+/* Associates Section */
+.associates-section {
+    padding: 80px 0;
+}
+
+.associates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.associate-card {
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.associate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.lawyer-photo-small {
+    background: var(--secondary-blue);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.photo-placeholder-small {
+    color: var(--white);
+}
+
+.photo-placeholder-small span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.associate-info {
+    padding: 1.5rem;
+}
+
+.associate-info h3 {
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.associate-info .position {
+    font-size: 1rem;
+}
+
+.associate-info .experience {
+    font-size: 0.9rem;
+}
+
+.associate-info .specialization {
+    margin-bottom: 1rem;
+}
+
+.associate-info .specialty {
+    font-size: 0.75rem;
+}
+
+.associate-info .bio {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* Expertise Section */
+.expertise-section {
+    padding: 80px 0;
+    background: var(--light-bg);
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.expertise-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.expertise-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.expertise-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.expertise-item h3 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.expertise-item p {
+    color: var(--text-medium);
+}
+
+/* Stats Section */
+.stats-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--accent-gray) 100%);
+    color: var(--white);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.stat-item-lawyer h3 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+.stat-item-lawyer p {
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+/* Responsive Lawyers */
+@media (max-width: 768px) {
+    .partner-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .lawyer-photo {
+        padding: 1.5rem;
+    }
+    
+    .lawyer-info {
+        padding: 1.5rem;
+    }
+    
+    .associates-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .specialization {
+        justify-content: center;
+    }
+    
+    .lawyer-info h3 {
+        font-size: 1.3rem;
+    }
+}
