@@ -1,4 +1,4 @@
-/* Tablet */
+/* Tablet Styles */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -25,9 +25,18 @@
         font-size: 2rem;
     }
 
+    .hero-content p {
+        font-size: 1rem;
+    }
+
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+    }
+
+    .btn {
+        width: 200px;
+        text-align: center;
     }
 
     .about-content {
@@ -39,24 +48,28 @@
         flex-direction: row;
         justify-content: space-around;
     }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 60px 0;
+    }
 }
 
-/* Mobile */
+/* Mobile Styles */
 @media (max-width: 480px) {
     .container {
         padding: 0 15px;
     }
 
     .hero {
-        padding: 120px 0 60px;
+        padding: 120px 0 80px;
     }
 
     .hero-content h1 {
         font-size: 1.8rem;
-    }
-
-    .section-title {
-        font-size: 2rem;
     }
 
     .services-grid {
@@ -67,7 +80,43 @@
         flex-direction: column;
     }
 
+    .stat-item {
+        padding: 1rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
     .footer-content {
         grid-template-columns: 1fr;
+    }
+
+    .cta-section h2 {
+        font-size: 2rem;
+    }
+
+    .cta-section p {
+        font-size: 1rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 320px) {
+    .nav-container {
+        padding: 0 10px;
+    }
+
+    .logo h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .service-card,
+    .contact-item {
+        padding: 1.5rem;
     }
 }
