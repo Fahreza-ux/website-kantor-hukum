@@ -66,6 +66,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize animations
     initScrollAnimations();
     
+    // Initialize dark mode
+    initDarkMode();
+    
     // Initialize counter animation if on lawyers page
     const statsSection = document.querySelector('.achievement-stats');
     if (statsSection) {
@@ -177,6 +180,50 @@ function animateCounter() {
     });
 }
 
+// Dark Mode Toggle - FUNGSI YANG DIPERBAIKI
+function initDarkMode() {
+    // Create theme toggle button
+    const themeToggle = document.createElement('button');
+    themeToggle.className = 'theme-toggle';
+    themeToggle.setAttribute('aria-label', 'Toggle dark mode');
+    themeToggle.innerHTML = `
+        <span class="sun-icon">☀️</span>
+        <span class="moon-icon">🌙</span>
+    `;
+    document.body.appendChild(themeToggle);
+
+    // Check for saved theme preference or respect OS preference
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
+        document.body.classList.add('dark-mode');
+    }
+
+    // Toggle theme on button click
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        
+        // Save user preference
+        if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    });
+
+    // Listen for system theme changes
+    prefersDarkScheme.addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+            if (e.matches) {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
+        }
+    });
+}
+
 // Additional utility functions
 function debounce(func, wait, immediate) {
     let timeout;
@@ -244,6 +291,32 @@ style.textContent = `
         50% { transform: scale(1.1); }
         100% { transform: scale(1); }
     }
+    
+    .loading-spinner {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+        border-top-color: transparent;
+        animation: spin 1s ease-in-out infinite;
+        margin-right: 8px;
+    }
+    
+    .btn-primary .loading-spinner {
+        border: 2px solid #ffffff;
+        border-top-color: transparent;
+    }
+    
+    .btn-secondary .loading-spinner,
+    .cta-btn.secondary .loading-spinner {
+        border: 2px solid currentColor;
+        border-top-color: transparent;
+    }
+    
+    @keyframes spin {
+        to { transform: rotate(360deg); }
+    }
 `;
 document.head.appendChild(style);
 
@@ -292,82 +365,4 @@ document.querySelectorAll('.btn, .cta-btn').forEach(button => {
             }, 1500);
         }
     });
-});
-
-// Add loading spinner CSS
-const spinnerStyle = document.createElement('style');
-spinnerStyle.textContent = `
-    .loading-spinner {
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        border: 2px solid #ffffff;
-        border-radius: 50%;
-        border-top-color: transparent;
-        animation: spin 1s ease-in-out infinite;
-        margin-right: 8px;
-    }
-    
-    .btn-primary .loading-spinner {
-        border: 2px solid #ffffff;
-        border-top-color: transparent;
-    }
-    
-    .btn-secondary .loading-spinner,
-    .cta-btn.secondary .loading-spinner {
-        border: 2px solid currentColor;
-        border-top-color: transparent;
-    }
-    
-    @keyframes spin {
-        to { transform: rotate(360deg); }
-    }
-`;
-document.head.appendChild(spinnerStyle);
-
-// Dark Mode Toggle
-function initDarkMode() {
-    const themeToggle = document.createElement('button');
-    themeToggle.className = 'theme-toggle';
-    themeToggle.innerHTML = `
-        <span class="sun-icon">☀️</span>
-        <span class="moon-icon">🌙</span>
-    `;
-    document.body.appendChild(themeToggle);
-
-    // Check for saved theme preference or respect OS preference
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    const savedTheme = localStorage.getItem('theme');
-    
-    if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
-        document.body.classList.add('dark-mode');
-    }
-
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        
-        // Save user preference
-        if (document.body.classList.contains('dark-mode')) {
-            localStorage.setItem('theme', 'dark');
-        } else {
-            localStorage.setItem('theme', 'light');
-        }
-    });
-
-    // Listen for system theme changes
-    prefersDarkScheme.addEventListener('change', (e) => {
-        if (!localStorage.getItem('theme')) {
-            if (e.matches) {
-                document.body.classList.add('dark-mode');
-            } else {
-                document.body.classList.remove('dark-mode');
-            }
-        }
-    });
-}
-
-// Initialize dark mode when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    initDarkMode();
-    // ... kode JavaScript lainnya yang sudah ada
 });
