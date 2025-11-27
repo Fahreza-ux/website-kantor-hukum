@@ -1,6 +1,6 @@
-# Website Kantor Hukum Setiawan & Partners
+# Website Kantor Hukum Kriswandi & Partners
 
-Website resmi Kantor Hukum Setiawan & Partners - Advokat & Konsultan Hukum Profesional.
+Website resmi Kantor Hukum Kriswandi & Partners - Advokat & Konsultan Hukum Profesional.
 
 ## Fitur
 - Website responsive
@@ -19,5 +19,5 @@ Website resmi Kantor Hukum Setiawan & Partners - Advokat & Konsultan Hukum Profe
 Website ini dihosting menggunakan GitHub Pages.
 
 ## Kontak
-- Email: info@setiawanlawfirm.com
+- Email: info@hukumu.com
 - Phone: (021) 1234-5678
