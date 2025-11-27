@@ -1,5 +1,6 @@
 /* Reset dan Base Styles */
 :root {
+    /* Light Theme Colors */
     --primary: #2c5282;
     --primary-dark: #2a4365;
     --secondary: #4299e1;
@@ -12,6 +13,20 @@
     --shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.08);
     --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.12);
+    
+    /* Dark Theme Colors */
+    --primary-dark-mode: #63b3ed;
+    --primary-dark-dark: #90cdf4;
+    --secondary-dark-mode: #4299e1;
+    --accent-dark-mode: #ecc94b;
+    --text-dark-mode: #e2e8f0;
+    --text-light-dark-mode: #a0aec0;
+    --background-dark-mode: #1a202c;
+    --background-light-dark-mode: #2d3748;
+    --border-dark-mode: #4a5568;
+    --shadow-dark-mode: 0 2px 4px rgba(0, 0, 0, 0.2);
+    --shadow-lg-dark-mode: 0 4px 12px rgba(0, 0, 0, 0.3);
+    --shadow-hover-dark-mode: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 * {
@@ -33,12 +48,71 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Body Class */
+body.dark-mode {
+    --primary: var(--primary-dark-mode);
+    --primary-dark: var(--primary-dark-dark);
+    --secondary: var(--secondary-dark-mode);
+    --accent: var(--accent-dark-mode);
+    --text: var(--text-dark-mode);
+    --text-light: var(--text-light-dark-mode);
+    --background: var(--background-dark-mode);
+    --background-light: var(--background-light-dark-mode);
+    --border: var(--border-dark-mode);
+    --shadow: var(--shadow-dark-mode);
+    --shadow-lg: var(--shadow-lg-dark-mode);
+    --shadow-hover: var(--shadow-hover-dark-mode);
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
+}
+
+/* Dark Mode Toggle */
+.theme-toggle {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--secondary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-hover);
+}
+
+.theme-toggle .sun-icon {
+    display: none;
+}
+
+.theme-toggle .moon-icon {
+    display: block;
+}
+
+body.dark-mode .theme-toggle .sun-icon {
+    display: block;
+}
+
+body.dark-mode .theme-toggle .moon-icon {
+    display: none;
 }
 
 /* Header & Navigation */
@@ -53,9 +127,18 @@ body {
     transition: all 0.3s ease;
 }
 
+body.dark-mode .navbar {
+    background: rgba(26, 32, 44, 0.95);
+    border-bottom: 1px solid var(--border);
+}
+
 .navbar.scrolled {
     background: rgba(255, 255, 255, 0.98);
     box-shadow: var(--shadow);
+}
+
+body.dark-mode .navbar.scrolled {
+    background: rgba(26, 32, 44, 0.98);
 }
 
 .nav-container {
@@ -177,6 +260,10 @@ body {
     background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
 }
 
+body.dark-mode .hero::before {
+    background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.05) 0%, transparent 50%);
+}
+
 .hero-content {
     position: relative;
     z-index: 1;
@@ -280,6 +367,10 @@ body {
     border-color: white;
 }
 
+body.dark-mode .btn-secondary:hover {
+    color: var(--background-dark-mode);
+}
+
 .btn-outline {
     border: 2px solid var(--secondary);
     color: var(--secondary);
@@ -302,6 +393,15 @@ body {
     background: #f7fafc;
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
+}
+
+body.dark-mode .btn-light {
+    background: var(--background-light-dark-mode);
+    color: var(--text-dark-mode);
+}
+
+body.dark-mode .btn-light:hover {
+    background: var(--border-dark-mode);
 }
 
 /* CTA Buttons for Lawyers */
@@ -349,6 +449,10 @@ body {
     border-color: white;
 }
 
+body.dark-mode .cta-btn.secondary:hover {
+    color: var(--background-dark-mode);
+}
+
 .btn-icon {
     font-size: 1.1rem;
 }
@@ -356,6 +460,8 @@ body {
 /* Section Styles */
 section {
     padding: 96px 0;
+    background: var(--background);
+    transition: background-color 0.3s ease;
 }
 
 .section-title {
@@ -366,6 +472,7 @@ section {
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.5px;
+    position: relative;
 }
 
 .section-title::after {
@@ -387,7 +494,6 @@ section {
 /* Services Preview */
 .services-preview {
     background: var(--background-light);
-    position: relative;
 }
 
 .services-grid {
@@ -398,7 +504,7 @@ section {
 }
 
 .service-card {
-    background: white;
+    background: var(--background);
     padding: 2.5rem 2rem;
     border-radius: 12px;
     text-align: center;
@@ -452,7 +558,7 @@ section {
 
 /* About Preview */
 .about-preview {
-    background: white;
+    background: var(--background);
 }
 
 .about-content {
@@ -545,7 +651,7 @@ section {
 .contact-item {
     text-align: center;
     padding: 2.5rem 2rem;
-    background: white;
+    background: var(--background);
     border-radius: 12px;
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
@@ -637,6 +743,10 @@ section {
     padding: 80px 0 30px;
 }
 
+body.dark-mode .footer {
+    background: #0f1419;
+}
+
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -700,7 +810,7 @@ section {
 }
 
 .partner-card {
-    background: white;
+    background: var(--background);
     border-radius: 16px;
     box-shadow: var(--shadow);
     overflow: hidden;
@@ -816,7 +926,7 @@ section {
 
 /* Associates Section */
 .associates-section {
-    background: white;
+    background: var(--background);
     padding: 80px 0;
 }
 
@@ -827,7 +937,7 @@ section {
 }
 
 .associate-card {
-    background: white;
+    background: var(--background);
     border-radius: 12px;
     box-shadow: var(--shadow);
     padding: 2rem;
@@ -902,7 +1012,7 @@ section {
 }
 
 .expertise-item {
-    background: white;
+    background: var(--background);
     padding: 2.5rem 2rem;
     border-radius: 12px;
     text-align: center;
@@ -938,7 +1048,7 @@ section {
 
 /* Achievement Stats */
 .achievement-stats {
-    background: white;
+    background: var(--background);
     padding: 80px 0;
 }
 
@@ -959,7 +1069,7 @@ section {
 
 .stat-card:hover {
     transform: translateY(-3px);
-    background: white;
+    background: var(--background);
     box-shadow: var(--shadow-lg);
 }
 
@@ -1017,7 +1127,7 @@ section {
 }
 
 .story-card {
-    background: white;
+    background: var(--background);
     padding: 2.5rem 2rem;
     border-radius: 12px;
     box-shadow: var(--shadow);
@@ -1077,7 +1187,7 @@ section {
 
 /* Testimonials */
 .testimonials-section {
-    background: white;
+    background: var(--background);
     padding: 80px 0;
 }
 
@@ -1097,7 +1207,7 @@ section {
 
 .testimonial-card:hover {
     transform: translateY(-4px);
-    background: white;
+    background: var(--background);
     box-shadow: var(--shadow-hover);
 }
 
@@ -1284,6 +1394,12 @@ button:disabled {
     margin-bottom: 1rem;
 }
 
+body.dark-mode .form-success {
+    background: #22543d;
+    border: 1px solid #2d774b;
+    color: #c6f6d5;
+}
+
 .form-error {
     background: #fed7d7;
     border: 1px solid #feb2b2;
@@ -1291,4 +1407,10 @@ button:disabled {
     padding: 1rem;
     border-radius: 8px;
     margin-bottom: 1rem;
+}
+
+body.dark-mode .form-error {
+    background: #742a2a;
+    border: 1px solid #9b2c2c;
+    color: #fed7d7;
 }
