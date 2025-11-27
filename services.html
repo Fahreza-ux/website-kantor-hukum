@@ -7,6 +7,7 @@
     <meta name="description" content="Layanan hukum profesional dari Kantor Hukum Kriswandi & Partners - Hukum Perdata, Pidana, Bisnis, Keluarga, dan lainnya">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -32,157 +33,170 @@
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero services-hero">
         <div class="container">
-            <h1>Layanan Hukum Kami</h1>
-            <p>Solusi hukum komprehensif untuk individu dan korporasi</p>
+            <div class="hero-content">
+                <h1>Layanan Hukum Profesional</h1>
+                <p>Solusi hukum komprehensif untuk individu, bisnis, dan korporasi dengan pendekatan personal dan profesional</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary">
+                        <i class="fas fa-search btn-icon"></i>
+                        Jelajahi Layanan
+                    </a>
+                    <a href="#consultation" class="btn btn-secondary">
+                        <i class="fas fa-calendar btn-icon"></i>
+                        Konsultasi Gratis
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Services Detail Section -->
-    <section class="services-detail">
+    <section class="services-section" id="services">
         <div class="container">
-            <!-- Hukum Perdata -->
-            <div class="service-category">
-                <div class="service-header">
-                    <div class="service-icon-large">⚖️</div>
-                    <div class="service-title">
-                        <h2>Hukum Perdata</h2>
-                        <p>Penanganan berbagai sengketa dan masalah hukum perdata</p>
-                    </div>
-                </div>
-                <div class="service-features">
-                    <div class="feature-item">
-                        <h4>⏱️ Perjanjian & Kontrak</h4>
-                        <p>Pembuatan, review, dan negosiasi berbagai jenis perjanjian dan kontrak hukum</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>🏠 Sengketa Properti</h4>
-                        <p>Penyelesaian sengketa tanah, bangunan, dan hak milik</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>💸 Wanprestasi & Perikatan</h4>
-                        <p>Penanganan wanprestasi dan pelanggaran perikatan</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>🛡️ Gugatan Perdata</h4>
-                        <p>Pendampingan proses gugatan perdata di pengadilan</p>
-                    </div>
-                </div>
+            <div class="services-header">
+                <h2 class="section-title">Layanan Hukum Kami</h2>
+                <p class="services-subtitle">Kami menyediakan layanan hukum komprehensif yang disesuaikan dengan kebutuhan spesifik klien, dengan pendekatan personal dan profesional.</p>
             </div>
+            
+            <div class="services-grid-detailed">
+                <!-- Hukum Perdata -->
+                <div class="service-card-detailed">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Hukum Perdata</h3>
+                        <p>Penanganan comprehensive untuk berbagai masalah hukum perdata termasuk kontrak, sengketa properti, dan perjanjian bisnis.</p>
+                        <ul class="service-features">
+                            <li>Drafting dan review kontrak</li>
+                            <li>Penyelesaian sengketa perdata</li>
+                            <li>Gugatan perdata dan eksekusi</li>
+                            <li>Mediasi dan arbitrase</li>
+                            <li>Sengketa properti dan tanah</li>
+                            <li>Wanprestasi dan perikatan</li>
+                        </ul>
+                        <a href="#contact" class="service-link">
+                            Konsultasi Sekarang
+                            <span class="arrow-icon">→</span>
+                        </a>
+                    </div>
+                </div>
 
-            <!-- Hukum Pidana -->
-            <div class="service-category">
-                <div class="service-header">
-                    <div class="service-icon-large">🚔</div>
-                    <div class="service-title">
-                        <h2>Hukum Pidana</h2>
-                        <p>Pendampingan hukum pidana di semua tingkat peradilan</p>
+                <!-- Hukum Pidana -->
+                <div class="service-card-detailed">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Hukum Pidana</h3>
+                        <p>Pendampingan hukum pidana dari tahap penyelidikan hingga persidangan, dengan fokus pada perlindungan hak klien.</p>
+                        <ul class="service-features">
+                            <li>Pendampingan tersangka/terdakwa</li>
+                            <li>Penanganan kasus korupsi</li>
+                            <li>Bantuan hukum praperadilan</li>
+                            <li>Banding dan kasasi</li>
+                            <li>Narkotika dan tindak pidana khusus</li>
+                            <li>Bebas bersyarat dan asimilasi</li>
+                        </ul>
+                        <a href="#contact" class="service-link">
+                            Konsultasi Sekarang
+                            <span class="arrow-icon">→</span>
+                        </a>
                     </div>
                 </div>
-                <div class="service-features">
-                    <div class="feature-item">
-                        <h4>🛡️ Bantuan Hukum Pidana</h4>
-                        <p>Pendampingan sejak tahap penyidikan hingga penuntutan</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>⚔️ Penanganan Kasus Khusus</h4>
-                        <p>Korupsi, narkotika, pencucian uang, dan tindak pidana khusus</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>📋 Praperadilan & Banding</h4>
-                        <p>Upaya hukum praperadilan, banding, kasasi, dan peninjauan kembali</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>🔓 Bebas Bersyarat & Asimilasi</h4>
-                        <p>Pengajuan pembebasan bersyarat dan program asimilasi</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Hukum Bisnis -->
-            <div class="service-category">
-                <div class="service-header">
-                    <div class="service-icon-large">💼</div>
-                    <div class="service-title">
-                        <h2>Hukum Bisnis & Korporasi</h2>
-                        <p>Layanan hukum untuk dunia usaha dan korporasi</p>
+                <!-- Hukum Bisnis -->
+                <div class="service-card-detailed">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Hukum Bisnis & Korporasi</h3>
+                        <p>Layanan hukum korporasi untuk mendukung pertumbuhan bisnis dan memastikan kepatuhan regulasi.</p>
+                        <ul class="service-features">
+                            <li>Pendirian dan restrukturisasi perusahaan</li>
+                            <li>M&A dan due diligence</li>
+                            <li>Kepatuhan regulasi</li>
+                            <li>Hukum Ketenagakerjaan</li>
+                            <li>Kontrak bisnis dan joint venture</li>
+                            <li>IPO dan go public</li>
+                        </ul>
+                        <a href="#contact" class="service-link">
+                            Konsultasi Sekarang
+                            <span class="arrow-icon">→</span>
+                        </a>
                     </div>
                 </div>
-                <div class="service-features">
-                    <div class="feature-item">
-                        <h4>🏢 Pendirian Perusahaan</h4>
-                        <p>PT, CV, Firma, dan bentuk badan usaha lainnya</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>📊 M&A & Due Diligence</h4>
-                        <p>Merger & Acquisition serta legal audit perusahaan</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>📈 IPO & Go Public</h4>
-                        <p>Pendampingan proses Initial Public Offering</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>📑 Kontrak Bisnis</h4>
-                        <p>Kontrak joint venture, distributorship, franchise, dan lainnya</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Hukum Keluarga -->
-            <div class="service-category">
-                <div class="service-header">
-                    <div class="service-icon-large">👨‍👩‍👧‍👦</div>
-                    <div class="service-title">
-                        <h2>Hukum Keluarga</h2>
-                        <p>Penanganan masalah hukum dalam lingkup keluarga</p>
+                <!-- Hukum Keluarga -->
+                <div class="service-card-detailed">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Hukum Keluarga</h3>
+                        <p>Penanganan masalah hukum dalam lingkup keluarga dengan pendekatan yang manusiawi dan profesional.</p>
+                        <ul class="service-features">
+                            <li>Perceraian dan gugatan cerai</li>
+                            <li>Pembagian harta gono-gini</li>
+                            <li>Warisan dan hibah</li>
+                            <li>Hak asuh dan perwalian</li>
+                            <li>Pengakuan anak</li>
+                            <li>Dispensasi nikah</li>
+                        </ul>
+                        <a href="#contact" class="service-link">
+                            Konsultasi Sekarang
+                            <span class="arrow-icon">→</span>
+                        </a>
                     </div>
                 </div>
-                <div class="service-features">
-                    <div class="feature-item">
-                        <h4>💔 Perceraian & Gugatan Cerai</h4>
-                        <p>Proses perceraian dan penyelesaian harta gono-gini</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>📜 Waris & Hibah</h4>
-                        <p>Pembagian waris, wasiat, dan hibah sesuai hukum</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>👶 Hak Asuh & Perwalian</h4>
-                        <p>Pengaturan hak asuh anak dan penetapan perwalian</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>🤝 Pengakuan Anak & Dispensasi</h4>
-                        <p>Pengakuan anak dan dispensasi nikah</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Layanan Lainnya -->
-            <div class="service-category">
-                <div class="service-header">
-                    <div class="service-icon-large">⭐</div>
-                    <div class="service-title">
-                        <h2>Layanan Khusus</h2>
-                        <p>Layanan hukum spesialis lainnya</p>
+                <!-- Hukum Khusus -->
+                <div class="service-card-detailed">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Layanan Khusus</h3>
+                        <p>Layanan hukum spesialis untuk kebutuhan khusus dengan expertise yang mendalam.</p>
+                        <ul class="service-features">
+                            <li>Hukum Administrasi Negara</li>
+                            <li>Hukum Teknologi & Siber</li>
+                            <li>Hukum Internasional</li>
+                            <li>Hukum Perpajakan</li>
+                            <li>Hukum Lingkungan</li>
+                            <li>Hukum Kekayaan Intelektual</li>
+                        </ul>
+                        <a href="#contact" class="service-link">
+                            Konsultasi Sekarang
+                            <span class="arrow-icon">→</span>
+                        </a>
                     </div>
                 </div>
-                <div class="service-features">
-                    <div class="feature-item">
-                        <h4>🏛️ Hukum Administrasi Negara</h4>
-                        <p>Penanganan sengketa TUN dan gugatan terhadap instansi pemerintah</p>
+
+                <!-- Konsultasi Hukum -->
+                <div class="service-card-detailed">
+                    <div class="service-icon-wrapper">
+                        <i class="fas fa-handshake"></i>
                     </div>
-                    <div class="feature-item">
-                        <h4>💼 Hukum Ketenagakerjaan</h4>
-                        <p>PHK, pesangon, perselisihan industrial, dan hubungan industrial</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>🌐 Hukum Teknologi & Siber</h4>
-                        <p>Perlindungan data, cyber crime, dan hukum e-commerce</p>
-                    </div>
-                    <div class="feature-item">
-                        <h4>🌍 Hukum Internasional</h4>
-                        <p>Perkara lintas negara dan hukum internasional</p>
+                    <div class="service-content">
+                        <h3>Konsultasi Hukum</h3>
+                        <p>Layanan konsultasi hukum komprehensif untuk memberikan solusi terbaik bagi masalah hukum Anda.</p>
+                        <ul class="service-features">
+                            <li>Konsultasi awal gratis</li>
+                            <li>Analisis kasus mendalam</li>
+                            <li>Legal opinion</li>
+                            <li>Pendampingan negosiasi</li>
+                            <li>Mediasi dan arbitrase</li>
+                            <li>Second legal opinion</li>
+                        </ul>
+                        <a href="#contact" class="service-link">
+                            Konsultasi Sekarang
+                            <span class="arrow-icon">→</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -190,42 +204,105 @@
     </section>
 
     <!-- Process Section -->
-    <section class="process-section">
+    <section class="services-process">
         <div class="container">
-            <h2 class="section-title">Proses Layanan Hukum</h2>
+            <h2 class="section-title">Proses Layanan Kami</h2>
             <div class="process-steps">
                 <div class="process-step">
-                    <div class="step-number">1</div>
+                    <i class="fas fa-handshake process-icon"></i>
                     <h3>Konsultasi Awal</h3>
-                    <p>Diskusi masalah hukum dan analisis kasus</p>
+                    <p>Diskusi mendalam untuk memahami kebutuhan dan masalah hukum yang dihadapi klien.</p>
                 </div>
                 <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3>Penandatanganan Kontrak</h3>
-                    <p>Kesepakatan kerja sama dan fee agreement</p>
+                    <i class="fas fa-search process-icon"></i>
+                    <h3>Analisis Kasus</h3>
+                    <p>Penelitian dan analisis mendalam terhadap aspek hukum dari kasus yang ditangani.</p>
                 </div>
                 <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3>Eksekusi Kasus</h3>
-                    <p>Penanganan dan penyelesaian masalah hukum</p>
+                    <i class="fas fa-cogs process-icon"></i>
+                    <h3>Strategi Penyelesaian</h3>
+                    <p>Penyusunan strategi hukum yang tepat dan efektif untuk mencapai hasil terbaik.</p>
                 </div>
                 <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3>Monitoring & Laporan</h3>
-                    <p>Update berkala perkembangan kasus</p>
+                    <i class="fas fa-tasks process-icon"></i>
+                    <h3>Eksekusi & Monitoring</h3>
+                    <p>Implementasi strategi dan monitoring berkelanjutan hingga kasus tuntas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Our Services -->
+    <section class="why-choose-services">
+        <div class="container">
+            <h2 class="section-title">Mengapa Memilih Layanan Kami</h2>
+            <div class="why-choose-grid">
+                <div class="why-choose-card">
+                    <div class="choose-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Profesional Berpengalaman</h3>
+                    <p>Tim lawyer berpengalaman dengan track record sukses menangani berbagai kasus hukum.</p>
+                </div>
+                <div class="why-choose-card">
+                    <div class="choose-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Kerahasiaan Terjaga</h3>
+                    <p>Privasi dan kerahasiaan klien menjadi prioritas utama dalam setiap penanganan kasus.</p>
+                </div>
+                <div class="why-choose-card">
+                    <div class="choose-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Responsif & Tepat Waktu</h3>
+                    <p>Layanan responsif dengan perhatian penuh dan komitmen terhadap tenggat waktu.</p>
+                </div>
+                <div class="why-choose-card">
+                    <div class="choose-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Strategi Efektif</h3>
+                    <p>Penyusunan strategi hukum yang tepat sasaran untuk hasil yang optimal.</p>
+                </div>
+                <div class="why-choose-card">
+                    <div class="choose-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Pendekatan Personal</h3>
+                    <p>Setiap klien mendapatkan perhatian personal dan solusi yang disesuaikan.</p>
+                </div>
+                <div class="why-choose-card">
+                    <div class="choose-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Perlindungan Maksimal</h3>
+                    <p>Komitmen untuk melindungi hak dan kepentingan klien secara maksimal.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta-section">
+    <section class="services-cta" id="consultation">
         <div class="container">
-            <h2>Siap Konsultasi Kasus Hukum Anda?</h2>
-            <p>Hubungi kami sekarang untuk konsultasi awal gratis</p>
-            <div class="cta-buttons">
-                <a href="contact.html" class="btn btn-primary">Hubungi Kami</a>
-                <a href="tel:02112345678" class="btn btn-secondary">📞 Telepon Sekarang</a>
+            <div class="cta-content">
+                <h2>Siap Mendapatkan Bantuan Hukum Profesional?</h2>
+                <p>Konsultasikan masalah hukum Anda dengan tim profesional kami. Jadwalkan konsultasi gratis sekarang juga dan dapatkan solusi terbaik untuk kasus Anda.</p>
+                <div class="cta-buttons-services">
+                    <a href="contact.html" class="btn btn-light">
+                        <i class="fas fa-phone btn-icon"></i>
+                        Hubungi Kami
+                    </a>
+                    <a href="tel:02112345678" class="btn btn-secondary">
+                        <i class="fas fa-phone-alt btn-icon"></i>
+                        Telepon Sekarang
+                    </a>
+                    <a href="https://wa.me/6281234567890" class="btn btn-primary">
+                        <i class="fab fa-whatsapp btn-icon"></i>
+                        WhatsApp
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -236,30 +313,38 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Kantor Hukum Kriswandi & Partners</h3>
-                    <p>Menjadi partner hukum terpercaya untuk individu dan bisnis dalam menyelesaikan berbagai permasalahan hukum.</p>
+                    <p>Menjadi partner hukum terpercaya untuk individu dan bisnis dalam menyelesaikan berbagai permasalahan hukum dengan profesionalisme dan integritas.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
                 
                 <div class="footer-section">
                     <h4>Kontak Cepat</h4>
-                    <p>📞 <a href="tel:02112345678">(021) 1234-5678</a></p>
-                    <p>📱 <a href="https://wa.me/6281234567890">0812-3456-7890</a></p>
-                    <p>✉️ <a href="mailto:info@kantorhukum.com">info@kantorhukum.com</a></p>
-                    <p>🏢 Jl. Sudirman No. 123, Jakarta</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:02112345678">(021) 1234-5678</a></p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/6281234567890">0812-3456-7890</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@kantorhukum.com">info@kantorhukum.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Jl. Sudirman No. 123, Jakarta</p>
                 </div>
                 
                 <div class="footer-section">
                     <h4>Layanan Utama</h4>
-                    <p>Hukum Perdata</p>
-                    <p>Hukum Pidana</p>
-                    <p>Hukum Bisnis</p>
-                    <p>Hukum Keluarga</p>
+                    <p><a href="#services">Hukum Perdata</a></p>
+                    <p><a href="#services">Hukum Pidana</a></p>
+                    <p><a href="#services">Hukum Bisnis</a></p>
+                    <p><a href="#services">Hukum Keluarga</a></p>
+                    <p><a href="#services">Layanan Khusus</a></p>
                 </div>
                 
                 <div class="footer-section">
                     <h4>Jam Operasional</h4>
-                    <p>Senin - Jumat: 08:00 - 17:00</p>
-                    <p>Sabtu: 08:00 - 12:00</p>
-                    <p>Minggu: Tutup</p>
+                    <p><i class="fas fa-clock"></i> Senin - Jumat: 08:00 - 17:00</p>
+                    <p><i class="fas fa-clock"></i> Sabtu: 08:00 - 12:00</p>
+                    <p><i class="fas fa-clock"></i> Minggu: Tutup</p>
+                    <p><i class="fas fa-calendar"></i> Konsultasi via appointment</p>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -267,6 +352,11 @@
             </div>
         </div>
     </footer>
+
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-sun sun-icon"></i>
+        <i class="fas fa-moon moon-icon"></i>
+    </button>
 
     <script src="js/script.js"></script>
 </body>
