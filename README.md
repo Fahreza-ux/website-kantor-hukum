@@ -54,3 +54,19 @@ Website resmi Kantor Hukum Kriswandi & Partners - Advokat & Konsultan Hukum Prof
 - **Mobile-First** - Design responsive
 
 ## 📁 Struktur Project
+website-kantor-hukum/
+├── index.html # Halaman utama
+├── services.html # Halaman layanan lengkap
+├── contact.html # Halaman kontak
+├── about.html # Halaman tentang kami
+├── lawyers.html # Halaman tim advokat
+├── css/
+│ ├── style.css # Stylesheet utama
+│ └── responsive.css # Stylesheet responsive
+├── js/
+│ └── script.js # JavaScript functionality
+├── images/ # Folder untuk gambar
+│ ├── logo.png
+│ ├── hero-bg.jpg
+│ └── lawyers/
+└── README.md # Dokumentasi ini
