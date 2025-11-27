@@ -176,11 +176,23 @@ body.dark-mode .navbar.scrolled {
     transition: 0.3s;
 }
 
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
 /* ===== HERO SECTIONS ===== */
 .hero {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: white;
-    padding: 100px 0 50px;
+    padding: 120px 0 60px;
     text-align: center;
     position: relative;
 }
@@ -211,7 +223,7 @@ body.dark-mode .navbar.scrolled {
 
 /* Services Hero */
 .services-hero {
-    padding: 100px 0 40px;
+    padding: 120px 0 50px;
 }
 
 .services-hero .hero-content h1 {
@@ -231,6 +243,7 @@ body.dark-mode .navbar.scrolled {
     transition: all 0.3s ease;
     border: 2px solid transparent;
     cursor: pointer;
+    gap: 0.5rem;
 }
 
 .btn-primary {
@@ -241,6 +254,7 @@ body.dark-mode .navbar.scrolled {
 .btn-primary:hover {
     background: #3182ce;
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(49, 130, 206, 0.3);
 }
 
 .btn-secondary {
@@ -252,6 +266,7 @@ body.dark-mode .navbar.scrolled {
 .btn-secondary:hover {
     background: white;
     color: var(--primary);
+    transform: translateY(-2px);
 }
 
 .btn-light {
@@ -267,24 +282,26 @@ body.dark-mode .navbar.scrolled {
 
 /* ===== SECTION STYLES ===== */
 section {
-    padding: 60px 0;
+    padding: 80px 0;
 }
 
 .section-title {
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
     color: var(--primary);
     font-weight: 700;
+    position: relative;
 }
 
 .section-title::after {
     content: '';
     display: block;
-    width: 50px;
-    height: 3px;
+    width: 60px;
+    height: 4px;
     background: var(--accent);
-    margin: 0.5rem auto 0;
+    margin: 1rem auto 0;
+    border-radius: 2px;
 }
 
 /* ===== BERANDA/HOMEPAGE STYLES ===== */
@@ -303,7 +320,7 @@ section {
 
 .feature-card {
     background: var(--background);
-    padding: 2rem;
+    padding: 2.5rem 2rem;
     border-radius: 12px;
     text-align: center;
     box-shadow: var(--shadow);
@@ -342,7 +359,7 @@ section {
 
 /* Stats Section */
 .stats-section {
-    padding: 60px 0;
+    padding: 80px 0;
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: white;
 }
@@ -355,7 +372,7 @@ section {
 }
 
 .stat-item h3 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
@@ -363,6 +380,7 @@ section {
 .stat-item p {
     opacity: 0.9;
     font-size: 1.1rem;
+    font-weight: 500;
 }
 
 /* Testimonials Section */
@@ -379,7 +397,7 @@ section {
 
 .testimonial-card {
     background: var(--background);
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 12px;
     box-shadow: var(--shadow);
     border: 1px solid var(--border);
@@ -401,6 +419,7 @@ section {
     font-style: italic;
     color: var(--text);
     line-height: 1.6;
+    font-size: 1rem;
 }
 
 .testimonial-author {
@@ -419,11 +438,13 @@ section {
     justify-content: center;
     color: white;
     font-weight: 600;
+    font-size: 1.2rem;
 }
 
 .author-info h4 {
     color: var(--primary);
     margin-bottom: 0.2rem;
+    font-size: 1.1rem;
 }
 
 .author-info p {
@@ -442,7 +463,6 @@ section {
     top: 70px;
     z-index: 999;
     border-bottom: 1px solid var(--border);
-    margin-bottom: 0;
 }
 
 body.dark-mode .services-nav {
@@ -487,25 +507,23 @@ body.dark-mode .services-nav {
 
 /* Services Overview Section */
 .services-overview {
-    padding: 40px 0 60px;
+    padding: 60px 0;
     background: var(--background-light);
-    margin: 0;
 }
 
 .services-intro {
     text-align: center;
     max-width: 700px;
-    margin: 0 auto 2.5rem;
+    margin: 0 auto 3rem;
     color: var(--text-light);
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.6;
 }
 
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1.5rem;
-    margin: 0;
+    gap: 2rem;
 }
 
 .service-card {
@@ -518,7 +536,6 @@ body.dark-mode .services-nav {
     height: 100%;
     display: flex;
     flex-direction: column;
-    margin: 0;
 }
 
 .service-card:hover {
@@ -527,45 +544,43 @@ body.dark-mode .services-nav {
 }
 
 .service-header {
-    padding: 1.2rem 1.5rem;
+    padding: 1.5rem;
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: white;
     display: flex;
     align-items: center;
-    min-height: 70px;
-    margin: 0;
+    min-height: 80px;
 }
 
 .service-icon {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin-right: 1rem;
     opacity: 0.9;
 }
 
 .service-header h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     margin: 0;
 }
 
 .service-body {
-    padding: 1.2rem 1.5rem;
+    padding: 1.5rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    margin: 0;
 }
 
 .service-body p {
     color: var(--text-light);
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
     line-height: 1.5;
 }
 
 .service-features {
     list-style: none;
-    margin: 0.5rem 0 1rem;
+    margin: 1rem 0;
     flex-grow: 1;
 }
 
@@ -574,7 +589,7 @@ body.dark-mode .services-nav {
     color: var(--text);
     position: relative;
     padding-left: 1.5rem;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
@@ -601,7 +616,7 @@ body.dark-mode .service-features li {
     color: var(--secondary);
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     margin-top: auto;
     padding: 0.5rem 0;
     transition: all 0.3s ease;
@@ -623,7 +638,7 @@ body.dark-mode .service-features li {
 /* Services Detailed Grid */
 .services-section {
     background: var(--background-light);
-    padding: 60px 0;
+    padding: 80px 0;
 }
 
 .services-header {
@@ -634,7 +649,7 @@ body.dark-mode .service-features li {
 
 .services-subtitle {
     color: var(--text-light);
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.6;
 }
 
@@ -647,7 +662,7 @@ body.dark-mode .service-features li {
 .service-card-detailed {
     background: var(--background);
     border-radius: 12px;
-    padding: 2rem;
+    padding: 2.5rem;
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
     border: 1px solid var(--border);
@@ -661,8 +676,8 @@ body.dark-mode .service-features li {
 }
 
 .service-icon-wrapper {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border-radius: 12px;
     background: linear-gradient(135deg, var(--secondary), var(--primary));
     display: flex;
@@ -670,12 +685,12 @@ body.dark-mode .service-features li {
     justify-content: center;
     margin-bottom: 1.5rem;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 .service-content h3 {
     color: var(--primary);
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
     font-weight: 600;
 }
@@ -683,7 +698,7 @@ body.dark-mode .service-features li {
 .service-content p {
     color: var(--text-light);
     margin-bottom: 1.5rem;
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 1.6;
 }
 
@@ -698,14 +713,14 @@ body.dark-mode .service-features li {
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 .service-features-detailed li::before {
     content: '✓';
     color: var(--secondary);
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .service-link-detailed {
@@ -715,7 +730,7 @@ body.dark-mode .service-features li {
     color: var(--secondary);
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     margin-top: auto;
     transition: all 0.3s ease;
 }
@@ -727,102 +742,94 @@ body.dark-mode .service-features li {
 
 /* Process Section */
 .services-process {
-    padding: 50px 0;
+    padding: 80px 0;
     background: var(--background);
-    margin: 0;
 }
 
 .process-steps {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin: 0;
+    gap: 2rem;
 }
 
 .process-step {
     text-align: center;
-    padding: 1.5rem;
+    padding: 2.5rem 2rem;
     background: var(--background-light);
     border-radius: 12px;
     transition: all 0.3s ease;
     border: 1px solid var(--border);
-    margin: 0;
 }
 
 .process-step:hover {
-    transform: translateY(-3px);
+    transform: translateY(-5px);
     box-shadow: var(--shadow);
 }
 
 .process-icon {
-    font-size: 2.2rem;
+    font-size: 3rem;
     color: var(--primary);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     opacity: 0.9;
 }
 
 .process-step h3 {
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
     color: var(--primary);
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 600;
 }
 
 .process-step p {
     color: var(--text-light);
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 /* Why Choose Section */
 .why-choose-services {
-    padding: 50px 0;
+    padding: 80px 0;
     background: var(--background-light);
-    margin: 0;
 }
 
 .why-choose-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin: 0;
+    gap: 2rem;
 }
 
 .why-choose-card {
     text-align: center;
-    padding: 1.5rem;
+    padding: 2.5rem 2rem;
     background: var(--background);
     border-radius: 12px;
     transition: all 0.3s ease;
     border: 1px solid var(--border);
-    margin: 0;
 }
 
 .why-choose-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-5px);
     box-shadow: var(--shadow);
 }
 
 .choose-icon {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--accent);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     opacity: 0.9;
 }
 
 .why-choose-card h3 {
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
     color: var(--primary);
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: 600;
 }
 
 .why-choose-card p {
     color: var(--text-light);
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 /* Services CTA */
@@ -830,8 +837,7 @@ body.dark-mode .service-features li {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: white;
     text-align: center;
-    padding: 50px 0;
-    margin: 0;
+    padding: 80px 0;
     position: relative;
     overflow: hidden;
 }
@@ -855,14 +861,14 @@ body.dark-mode .service-features li {
 }
 
 .cta-content h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
     font-weight: 700;
 }
 
 .cta-content p {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
     opacity: 0.9;
     line-height: 1.6;
 }
@@ -872,7 +878,6 @@ body.dark-mode .service-features li {
     gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0;
 }
 
 /* ===== TIM ADVOKAT/LAWYERS STYLES ===== */
@@ -886,7 +891,6 @@ body.dark-mode .service-features li {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
-    margin-top: 3rem;
 }
 
 .team-card {
@@ -896,7 +900,6 @@ body.dark-mode .service-features li {
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
     border: 1px solid var(--border);
-    position: relative;
 }
 
 .team-card:hover {
@@ -1008,8 +1011,7 @@ body.dark-mode .service-features li {
 .footer {
     background: var(--primary-dark);
     color: #cbd5e0;
-    padding: 50px 0 20px;
-    margin: 0;
+    padding: 60px 0 20px;
 }
 
 body.dark-mode .footer {
@@ -1018,27 +1020,36 @@ body.dark-mode .footer {
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-bottom: 2rem;
 }
 
 .footer-section h3 {
     color: white;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.footer-section h4 {
+    color: white;
     margin-bottom: 1rem;
     font-size: 1.1rem;
 }
 
 .footer-section p {
-    margin-bottom: 0.5rem;
-    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
     opacity: 0.9;
+    line-height: 1.5;
 }
 
 .footer-section a {
     color: #cbd5e0;
     text-decoration: none;
     transition: color 0.3s ease;
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
 .footer-section a:hover {
@@ -1047,45 +1058,45 @@ body.dark-mode .footer {
 
 .footer-bottom {
     text-align: center;
-    padding-top: 1.5rem;
-    border-top: 1px solid #2d3748;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: #a0aec0;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
 }
 
 /* Social Links */
 .social-links {
     display: flex;
-    gap: 0.5rem;
-    margin-top: 0.8rem;
+    gap: 0.8rem;
+    margin-top: 1rem;
 }
 
 .social-links a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 35px;
-    height: 35px;
-    background: var(--background-light);
-    color: var(--text);
-    border-radius: 6px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 50%;
     text-decoration: none;
     transition: all 0.3s ease;
+    font-size: 1.1rem;
 }
 
 .social-links a:hover {
     background: var(--secondary);
-    color: white;
     transform: translateY(-2px);
 }
 
 /* ===== DARK MODE TOGGLE ===== */
 .theme-toggle {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 45px;
-    height: 45px;
+    bottom: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background: var(--secondary);
     color: white;
@@ -1094,7 +1105,7 @@ body.dark-mode .footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     box-shadow: var(--shadow-lg);
     z-index: 1000;
     transition: all 0.3s ease;
@@ -1102,6 +1113,23 @@ body.dark-mode .footer {
 
 .theme-toggle:hover {
     transform: scale(1.1);
+}
+
+.sun-icon, .moon-icon {
+    position: absolute;
+    transition: opacity 0.3s ease;
+}
+
+body:not(.dark-mode) .moon-icon {
+    display: none;
+}
+
+body.dark-mode .sun-icon {
+    display: none;
+}
+
+body.dark-mode .moon-icon {
+    display: block;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -1129,15 +1157,30 @@ body.dark-mode .footer {
         text-align: center;
         transition: 0.3s;
         box-shadow: var(--shadow-lg);
-        padding: 1.5rem 0;
+        padding: 2rem 0;
+        gap: 0;
     }
 
     .nav-menu.active {
         left: 0;
     }
 
+    .nav-menu li {
+        margin: 0.8rem 0;
+    }
+
+    .nav-menu a {
+        padding: 0.8rem 2rem;
+        display: block;
+        font-size: 1rem;
+    }
+
     .hamburger {
         display: flex;
+    }
+
+    .hero {
+        padding: 100px 0 50px;
     }
 
     .hero-content h1 {
@@ -1145,7 +1188,11 @@ body.dark-mode .footer {
     }
 
     .section-title {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
+    }
+
+    section {
+        padding: 60px 0;
     }
 
     .features-grid,
@@ -1157,7 +1204,7 @@ body.dark-mode .footer {
 
     .services-grid {
         grid-template-columns: 1fr;
-        gap: 1.2rem;
+        gap: 1.5rem;
     }
     
     .services-grid-detailed {
@@ -1177,11 +1224,11 @@ body.dark-mode .footer {
     .process-steps,
     .why-choose-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.2rem;
+        gap: 1.5rem;
     }
 
     .cta-content h2 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     .cta-buttons-services {
@@ -1190,6 +1237,12 @@ body.dark-mode .footer {
     
     .team-content {
         padding: 1.5rem;
+    }
+    
+    .feature-card,
+    .testimonial-card,
+    .service-card-detailed {
+        padding: 2rem 1.5rem;
     }
 }
 
@@ -1207,25 +1260,16 @@ body.dark-mode .footer {
         font-size: 1.8rem;
     }
 
+    .hero-content p {
+        font-size: 1rem;
+    }
+
     .services-overview {
-        padding: 30px 0 50px;
+        padding: 40px 0;
     }
 
     .services-intro {
         margin-bottom: 2rem;
-    }
-
-    .service-card {
-        margin: 0;
-    }
-
-    .service-header,
-    .service-body {
-        padding: 1rem;
-    }
-    
-    .service-card-detailed {
-        padding: 1.5rem;
     }
 
     .services-nav-list {
@@ -1245,16 +1289,20 @@ body.dark-mode .footer {
     .testimonials-grid,
     .team-grid {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 1.2rem;
     }
 
     .process-step,
     .why-choose-card {
-        padding: 1.2rem 1rem;
+        padding: 1.5rem;
     }
 
     .cta-content h2 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
+    }
+
+    .cta-content p {
+        font-size: 0.95rem;
     }
 
     .cta-buttons-services {
@@ -1264,11 +1312,6 @@ body.dark-mode .footer {
 
     .btn {
         width: 200px;
-    }
-
-    .feature-card,
-    .testimonial-card {
-        padding: 1.5rem;
     }
 
     .team-content {
@@ -1313,5 +1356,13 @@ body.dark-mode .footer {
     .contact-link {
         width: 35px;
         height: 35px;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
     }
 }
