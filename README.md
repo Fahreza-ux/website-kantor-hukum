@@ -9,6 +9,7 @@ Website resmi Kantor Hukum Kriswandi & Partners - Penyedia jasa advokat dan kons
 
 ## 📋 Daftar Isi
 
+- [Demo Website](#-demo-website)
 - [Fitur Utama](#-fitur-utama)
 - [Halaman Website](#-halaman-website)
 - [Teknologi](#-teknologi)
@@ -16,9 +17,16 @@ Website resmi Kantor Hukum Kriswandi & Partners - Penyedia jasa advokat dan kons
 - [Instalasi & Deployment](#-instalasi--deployment)
 - [Customization](#-customization)
 - [Daftar Layanan](#-daftar-layanan)
+- [Tim Advokat](#-tim-advokat)
 - [Kontak](#-kontak)
 - [Maintenance](#-maintenance)
 - [License](#-license)
+
+## 🚀 Demo Website
+
+**🌐 Live Website:** [https://fahreza-ux.github.io/website-kantor-hukum/](https://fahreza-ux.github.io/website-kantor-hukum/)
+
+**📱 Test di Mobile:** Buka link di atas dari smartphone Anda
 
 ## ✨ Fitur Utama
 
@@ -32,30 +40,30 @@ Website resmi Kantor Hukum Kriswandi & Partners - Penyedia jasa advokat dan kons
 | ✅ SEO Optimized | Live | Meta tags dan struktur semantic |
 | ✅ Fast Loading | Live | Optimized performance |
 | ✅ Cross-browser | Live | Support semua browser modern |
+| ✅ Interactive Elements | Live | Hover effects & animations |
+| ✅ Accessibility | Live | Keyboard navigation friendly |
 
 ## 🏠 Halaman Website
 
 ### 📍 Halaman yang Sudah Live
-| Halaman | File | Status | Deskripsi |
-|---------|------|--------|-----------|
-| **Beranda** | `index.html` | ✅ Live | Landing page dengan overview |
-| **Layanan** | `services.html` | ✅ Live | Detail lengkap layanan hukum |
-| **Kontak** | `contact.html` | ✅ Live | Form kontak dan informasi |
+| Halaman | File | Status | Fitur |
+|---------|------|--------|-------|
+| **Beranda** | `index.html` | ✅ Live | Hero section, layanan preview, kontak info |
+| **Layanan** | `services.html` | ✅ Live | 5 kategori layanan lengkap, proses kerja |
+| **Kontak** | `contact.html` | ✅ Live | Form kontak, map, jam operasional |
+| **Tim Advokat** | `lawyers.html` | ✅ Live | Profil partners & associates, expertise |
 
 ### 📍 Halaman dalam Pengembangan
 | Halaman | File | Status | Deskripsi |
 |---------|------|--------|-----------|
 | **Tentang Kami** | `about.html` | 🔄 Planned | Profil dan sejarah firma |
-| **Tim Advokat** | `lawyers.html` | 🔄 Planned | Profil partner dan associates |
 
-## Live Web Test 
-- https://fahreza-ux.github.io/website-kantor-hukum/
-  
 ## 🛠️ Teknologi
 
 **Frontend Stack:**
 ```bash
-HTML5 - Semantic markup
-CSS3 - Custom properties, Flexbox, Grid
-JavaScript - Vanilla ES6+
-GitHub Pages - Static hosting
+HTML5 - Semantic markup & accessibility
+CSS3 - Custom properties, Flexbox, Grid, Animations
+JavaScript - Vanilla ES6+ for interactivity
+GitHub Pages - Static hosting dengan CDN
+
