@@ -94,3 +94,40 @@ const statsSection = document.querySelector('.about-stats');
 if (statsSection) {
     observer.observe(statsSection);
 }
+// Counter animation for stats
+function animateCounter() {
+    const counters = document.querySelectorAll('.stat-number');
+    const speed = 200; // The lower the slower
+    
+    counters.forEach(counter => {
+        const target = +counter.getAttribute('data-count');
+        const count = +counter.innerText;
+        
+        const inc = target / speed;
+        
+        if (count < target) {
+            counter.innerText = Math.ceil(count + inc);
+            setTimeout(() => animateCounter(), 1);
+        } else {
+            counter.innerText = target;
+        }
+    });
+}
+
+// Initialize when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Animate counters when they come into view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateCounter();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    const statsSection = document.querySelector('.achievement-stats');
+    if (statsSection) {
+        observer.observe(statsSection);
+    }
+});
