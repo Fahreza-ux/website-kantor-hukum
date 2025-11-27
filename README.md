@@ -2,25 +2,55 @@
 
 Website resmi Kantor Hukum Kriswandi & Partners - Advokat & Konsultan Hukum Profesional.
 
-## Fitur
-- Website responsive
-- Design profesional
-- Multiple pages
-- Contact form
-- Mobile friendly
+## 🌐 Live Website
+**URL:** `https://[username-anda].github.io/website-kantor-hukum/`
 
-## Teknologi
-- HTML5
-- CSS3
-- JavaScript
-- GitHub Pages
+## 📋 Fitur Website
 
-## Deployment
-Website ini dihosting menggunakan GitHub Pages.
+### 🏠 Halaman yang Tersedia
+- **Homepage** (`index.html`) - Beranda dengan overview layanan
+- **Layanan** (`services.html`) - Detail lengkap layanan hukum
+- **Kontak** (`contact.html`) - Informasi kontak dan form konsultasi
+- **Tentang Kami** (`about.html`) - Profil dan visi misi (dalam pengembangan)
+- **Tim Advokat** (`lawyers.html`) - Profil tim (dalam pengembangan)
 
-## Kontak
-- Email: info@hukumu.com
-- Phone: (021) 1234-5678
+### 💼 Layanan Hukum yang Ditawarkan
+1. **Hukum Perdata**
+   - Perjanjian & Kontrak
+   - Sengketa Properti
+   - Wanprestasi & Perikatan
+   - Gugatan Perdata
 
-## View Web
--  https://fahreza-ux.github.io/website-kantor-hukum/
+2. **Hukum Pidana**
+   - Bantuan Hukum Pidana
+   - Penanganan Kasus Khusus
+   - Praperadilan & Banding
+   - Bebas Bersyarat & Asimilasi
+
+3. **Hukum Bisnis & Korporasi**
+   - Pendirian Perusahaan
+   - M&A & Due Diligence
+   - IPO & Go Public
+   - Kontrak Bisnis
+
+4. **Hukum Keluarga**
+   - Perceraian & Gugatan Cerai
+   - Waris & Hibah
+   - Hak Asuh & Perwalian
+   - Pengakuan Anak & Dispensasi
+
+5. **Layanan Khusus**
+   - Hukum Administrasi Negara
+   - Hukum Ketenagakerjaan
+   - Hukum Teknologi & Siber
+   - Hukum Internasional
+
+## 🛠️ Teknologi yang Digunakan
+
+- **HTML5** - Struktur website
+- **CSS3** - Styling dan responsive design
+- **JavaScript** - Interaktivitas
+- **GitHub Pages** - Hosting gratis
+- **Mobile-First** - Design responsive
+
+## 📁 Struktur Project
