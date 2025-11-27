@@ -48,6 +48,9 @@ Website resmi Kantor Hukum Kriswandi & Partners - Penyedia jasa advokat dan kons
 | **Tentang Kami** | `about.html` | 🔄 Planned | Profil dan sejarah firma |
 | **Tim Advokat** | `lawyers.html` | 🔄 Planned | Profil partner dan associates |
 
+## Live Web Test 
+- https://fahreza-ux.github.io/website-kantor-hukum/
+  
 ## 🛠️ Teknologi
 
 **Frontend Stack:**
