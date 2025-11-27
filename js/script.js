@@ -324,3 +324,50 @@ spinnerStyle.textContent = `
     }
 `;
 document.head.appendChild(spinnerStyle);
+
+// Dark Mode Toggle
+function initDarkMode() {
+    const themeToggle = document.createElement('button');
+    themeToggle.className = 'theme-toggle';
+    themeToggle.innerHTML = `
+        <span class="sun-icon">☀️</span>
+        <span class="moon-icon">🌙</span>
+    `;
+    document.body.appendChild(themeToggle);
+
+    // Check for saved theme preference or respect OS preference
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
+        document.body.classList.add('dark-mode');
+    }
+
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        
+        // Save user preference
+        if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark');
+        } else {
+            localStorage.setItem('theme', 'light');
+        }
+    });
+
+    // Listen for system theme changes
+    prefersDarkScheme.addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+            if (e.matches) {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
+        }
+    });
+}
+
+// Initialize dark mode when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initDarkMode();
+    // ... kode JavaScript lainnya yang sudah ada
+});
